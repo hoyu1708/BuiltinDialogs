@@ -15,6 +15,19 @@ cBuiltindlg::cBuiltindlg(QWidget *parent)
     progressPushBtn = new QPushButton(QStringLiteral("進度對話盒"));
     printPushBtn = new QPushButton(QStringLiteral("列印對話盒"));
 
+    gridlayout->addWidget(colorPushBtn,0,0,1,1);
+    gridlayout->addWidget(errorPushBtn,0,1,1,1);
+    gridlayout->addWidget(filePushBtn,0,2,1,1);
+    gridlayout->addWidget(fontPushBtn,1,0,1,1);
+    gridlayout->addWidget(inputPushBtn,1,1,1,1);
+    gridlayout->addWidget(pagePushBtn,1,2,1,1);
+    gridlayout->addWidget(progressPushBtn,2,0,1,1);
+    gridlayout->addWidget(printPushBtn,2,1,1,1);
+    gridlayout->addWidget(displayTextEdit,3,0,3,3);
+
+    setLayout(gridlayout);
+    setWindowTitle(QStringLiteral("內建對話盒展示"));
+    resize(400,300);
 }
 
 cBuiltindlg::~cBuiltindlg()
